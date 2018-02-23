@@ -2,14 +2,14 @@
 #include "stm32f10x_gpio.h"     // Pins Interface
 #include "stm32f10x_rcc.h"      // Enable peripheral clock
 #include "stm32f10x_exti.h"     // External interruption
-#include "misc.h"     // Connect exti and gpio
+#include "misc.h"               // NVIC
 #include "read_encoder.h"
-
-int xa, xb;                     // Encoder channel A 
+#include "main.h"
 int stt, dstt, stt_prev;
-int count = 0;
+int xa, xb;
 
 void XA_config(void){ //A0
+	count = 123;
 		
 	GPIO_InitTypeDef GPIO_InitStruct;                  // GPIO Struct oobject
 	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_0;             // Use pin#0

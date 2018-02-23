@@ -12,3 +12,4 @@
 .\objects\read_encoder.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
 .\objects\read_encoder.o: .\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\objects\read_encoder.o: .\Inc\read_encoder.h
+.\objects\read_encoder.o: .\Inc\main.h

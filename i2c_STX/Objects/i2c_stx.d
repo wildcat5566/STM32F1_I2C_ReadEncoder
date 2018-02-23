@@ -14,3 +14,5 @@
 .\objects\i2c_stx.o: .\Inc\i2c_STX.h
 .\objects\i2c_stx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\i2c_stx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\i2c_stx.o: .\Inc\main.h
+.\objects\i2c_stx.o: .\Inc\read_encoder.h

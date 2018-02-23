@@ -4,9 +4,10 @@
 #include "stm32f10x_i2c.h"
 #include "misc.h"
 #include "i2c_STX.h"
-
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
+#include "read_encoder.h"
 
 int dec;
 uint8_t *hex;
@@ -14,6 +15,7 @@ uint8_t bufferindex = 0;
 int p[3] = {16777216, 65536, 256};
 
 void i2c_init(void){
+	
     GPIO_InitTypeDef  GPIO_InitStructure;
     NVIC_InitTypeDef NVIC_InitStructure;
     I2C_InitTypeDef  I2C_InitStructure;
@@ -51,14 +53,11 @@ void i2c_init(void){
 }
 
 void I2C1_ClearFlag(void) {
-  // ADDR-Flag clear
-  while((I2C1->SR1 & I2C_SR1_ADDR) == I2C_SR1_ADDR) {
+  while((I2C1->SR1 & I2C_SR1_ADDR) == I2C_SR1_ADDR) { // ADDR-Flag clear
     I2C1->SR1;
     I2C1->SR2;
   }
-
-  // STOPF Flag clear
-  while((I2C1->SR1&I2C_SR1_STOPF) == I2C_SR1_STOPF) {
+  while((I2C1->SR1&I2C_SR1_STOPF) == I2C_SR1_STOPF) { // STOPF Flag clear
     I2C1->SR1;
     I2C1->CR1 |= 0x1;
   }
@@ -80,7 +79,7 @@ void I2C1_EV_IRQHandler(void) {
   event=I2C_GetLastEvent(I2C1); // Read last event
 
   if(event==I2C_EVENT_SLAVE_TRANSMITTER_ADDRESS_MATCHED) {
-		dec = -112563978;
+		dec = count;
     sign = (dec < 0);
     I2C_SendData(I2C1, sign);
 		
