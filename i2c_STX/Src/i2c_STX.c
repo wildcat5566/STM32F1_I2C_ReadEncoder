@@ -80,7 +80,7 @@ void I2C1_EV_IRQHandler(void) {
   event=I2C_GetLastEvent(I2C1); // Read last event
 
   if(event==I2C_EVENT_SLAVE_TRANSMITTER_ADDRESS_MATCHED) {
-		dec = 4578637;
+		dec = -112563978;
     sign = (dec < 0);
     I2C_SendData(I2C1, sign);
 		
