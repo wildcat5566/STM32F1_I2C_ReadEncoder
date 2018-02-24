@@ -6,7 +6,8 @@
 #define I2C_PIN_SCL			GPIO_Pin_6
 #define I2Cx_EV_IRQn	  I2C1_EV_IRQn
 #define bufferlength 		4
-#define I2CSLAVE_ADDR		0x4A
+#define I2CSLAVE_ADDR		0x4F
 #define I2C_CLOCK_FRQ   100000    // I2C-Frq in Hz (100 kHz)
 
 void i2c_init(void);
+
