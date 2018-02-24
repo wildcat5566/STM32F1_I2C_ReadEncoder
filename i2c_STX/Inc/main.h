@@ -5,7 +5,12 @@
 #ifdef __cplusplus
 extern "C" {
 #endif 
-
+	
+#include "stm32f10x.h"
+#include "stm32f10x_conf.h" 
+#include <stdio.h>
+#include <stdlib.h>
+	
 extern int count;
 	
 	

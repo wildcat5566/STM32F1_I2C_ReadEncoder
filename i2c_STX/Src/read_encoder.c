@@ -1,10 +1,6 @@
-#include "stm32f10x.h"          
-#include "stm32f10x_gpio.h"     // Pins Interface
-#include "stm32f10x_rcc.h"      // Enable peripheral clock
-#include "stm32f10x_exti.h"     // External interruption
-#include "misc.h"               // NVIC
-#include "read_encoder.h"
 #include "main.h"
+#include "read_encoder.h"
+
 int stt, dstt, stt_prev;
 int xa, xb;
 

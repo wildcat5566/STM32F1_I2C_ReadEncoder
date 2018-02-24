@@ -1,5 +1,3 @@
-#include "stm32f10x.h"
-#include "stm32f10x_gpio.h"
 #include "main.h"
 #include "i2c_STX.h"
 #include "read_encoder.h"

@@ -8,10 +8,12 @@
 #define ExtReset 22
 
 int FR, FL, RR, RL, WR, WL;
+
 void setup() {
-  Wire.begin();         // join i2c bus (address optional for master)
-  Serial.begin(115200);  // start serial for output
-  
+  Wire.begin();
+  Serial.begin(115200);
+
+  // External reset for all slaves
   pinMode(ExtReset, OUTPUT);
   digitalWrite(ExtReset, LOW);
   delay(10);
@@ -26,18 +28,18 @@ void loop() {
   WR = hex2dec(WR_addr);
   WL = hex2dec(WL_addr);
 
-  /*Serial.print(FR); Serial.print(", ");
+  Serial.print(FR); Serial.print(", ");
   Serial.print(FL); Serial.print(", ");
   Serial.print(RR); Serial.print(", ");
   Serial.print(RL); Serial.print(", ");
-  Serial.print(WR); Serial.print(", ");*/
+  Serial.print(WR); Serial.print(", ");
   Serial.print(WL); Serial.println();
 }
 
-int hex2dec(byte address){
+int hex2dec(uint8_t address){
   Wire.requestFrom(address, 5); 
   int dec;
-  byte hex[5];
+  uint8_t hex[5];
    while (Wire.available()) {
     for(int i = 0; i < 5; i ++){
       hex[i] = Wire.read();
@@ -49,4 +51,3 @@ int hex2dec(byte address){
   }
   return dec;
 }
-
