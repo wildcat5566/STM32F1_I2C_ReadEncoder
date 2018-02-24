@@ -10,4 +10,3 @@
 #define I2C_CLOCK_FRQ   100000    // I2C-Frq in Hz (100 kHz)
 
 void i2c_init(void);
-

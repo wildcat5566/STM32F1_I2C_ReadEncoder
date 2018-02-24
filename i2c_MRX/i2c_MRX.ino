@@ -26,11 +26,11 @@ void loop() {
   WR = hex2dec(WR_addr);
   WL = hex2dec(WL_addr);
 
-  Serial.print(FR); Serial.print(", ");
+  /*Serial.print(FR); Serial.print(", ");
   Serial.print(FL); Serial.print(", ");
   Serial.print(RR); Serial.print(", ");
   Serial.print(RL); Serial.print(", ");
-  Serial.print(WR); Serial.print(", ");
+  Serial.print(WR); Serial.print(", ");*/
   Serial.print(WL); Serial.println();
 }
 

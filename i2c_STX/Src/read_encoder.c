@@ -39,19 +39,19 @@ void XB_config(void){
 	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIO_Port, &GPIO_InitStruct);
 	
-	EXTI_InitTypeDef EXTI_InitStructure2;
-	EXTI_InitStructure2.EXTI_Line = EXTI_LineB;
-	EXTI_InitStructure2.EXTI_Mode = EXTI_Mode_Interrupt;
-	EXTI_InitStructure2.EXTI_Trigger = EXTI_Trigger_Rising_Falling;
-	EXTI_InitStructure2.EXTI_LineCmd = ENABLE;
-	EXTI_Init(&EXTI_InitStructure2);
+	EXTI_InitTypeDef EXTI_InitStructure;
+	EXTI_InitStructure.EXTI_Line = EXTI_LineB;
+	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising_Falling;
+	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+	EXTI_Init(&EXTI_InitStructure);
 	
-	NVIC_InitTypeDef NVIC_InitStructure2;
-	NVIC_InitStructure2.NVIC_IRQChannel = NVIC_IRQChannelB;
-	NVIC_InitStructure2.NVIC_IRQChannelPreemptionPriority = 0;
-  NVIC_InitStructure2.NVIC_IRQChannelSubPriority        = 1;
-	NVIC_InitStructure2.NVIC_IRQChannelCmd = ENABLE;	
-	NVIC_Init(&NVIC_InitStructure2);
+	NVIC_InitTypeDef NVIC_InitStructure;
+	NVIC_InitStructure.NVIC_IRQChannel = NVIC_IRQChannelB;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+  NVIC_InitStructure.NVIC_IRQChannelSubPriority        = 1;
+	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;	
+	NVIC_Init(&NVIC_InitStructure);
 }
 
 void vars_initialize(void) {
