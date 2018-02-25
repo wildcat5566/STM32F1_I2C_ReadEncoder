@@ -74,7 +74,9 @@ void I2C1_EV_IRQHandler(void) {
   if(event==I2C_EVENT_SLAVE_TRANSMITTER_ADDRESS_MATCHED) {
 		dec = count;
     sign = (dec < 0);
+		I2C_SendData(I2C1, collide);
     I2C_SendData(I2C1, sign);
+		
 		
 		dec = abs(dec);
 		hex = dec2hex(dec);

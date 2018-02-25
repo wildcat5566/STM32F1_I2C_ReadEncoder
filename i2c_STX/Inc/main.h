@@ -12,7 +12,7 @@ extern "C" {
 #include <stdlib.h>
 	
 extern int count;
-	
+extern int collide;
 	
 #ifdef __cplusplus
 }

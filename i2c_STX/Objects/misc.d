@@ -10,4 +10,5 @@
 .\objects\misc.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
 .\objects\misc.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h
 .\objects\misc.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\objects\misc.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h
 .\objects\misc.o: .\STM32F10x_StdPeriph_Driver\inc\misc.h

@@ -10,6 +10,7 @@
 .\objects\i2c_stx.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h
 .\objects\i2c_stx.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h
 .\objects\i2c_stx.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\objects\i2c_stx.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h
 .\objects\i2c_stx.o: .\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\objects\i2c_stx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\i2c_stx.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h

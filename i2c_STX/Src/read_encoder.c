@@ -65,8 +65,7 @@ void EXTI0_IRQHandler(void) {
 			dstt = (stt - stt_prev + 4) % 4;
 			count += (dstt % 2)*(dstt - 2);
 			stt_prev = stt;
-			EXTI_ClearFlag(EXTI_LineA); 
-      EXTI_ClearITPendingBit(EXTI_LineA);      // Clear interrupt flag
+			EXTI->PR = EXTI_LineA; // Clear interrupt flag
     }
 }
  
@@ -79,7 +78,6 @@ void EXTI1_IRQHandler(void) {
 			dstt = (stt - stt_prev + 4) % 4;
 			count += (dstt % 2)*(dstt - 2);
 			stt_prev = stt;
-			EXTI_ClearFlag(EXTI_LineB); 
-      EXTI_ClearITPendingBit(EXTI_LineB); 
+			EXTI->PR = EXTI_LineB;  
     }
 }

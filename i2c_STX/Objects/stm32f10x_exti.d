@@ -10,4 +10,5 @@
 .\objects\stm32f10x_exti.o: .\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\objects\stm32f10x_exti.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h
 .\objects\stm32f10x_exti.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h
+.\objects\stm32f10x_exti.o: .\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h
 .\objects\stm32f10x_exti.o: .\STM32F10x_StdPeriph_Driver\inc\misc.h
